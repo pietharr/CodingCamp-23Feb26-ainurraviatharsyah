@@ -1,0 +1,30 @@
+.btn-glow {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+      transition: box-shadow 0.3s ease, transform 0.2s;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+      transform: translateY(-2px);
+    }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px; /* tinggi navbar kamu */
+  }
+
+/* Placeholder style */
+#greetingName:empty::before {
+  content: attr(data-placeholder);
+  color: #3b82f6;       /* biru */
+  opacity: 0.5;         /* redup */
+}
+
+/* Saat focus kasih efek */
+#greetingName:focus {
+  border-color: #2563eb;  /* biru lebih gelap */
+}
+
+/* Supaya caret tetap kelihatan */
+#greetingName {
+  min-width: 80px;
+  display: inline-block;
+}

@@ -8,19 +8,127 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- FontAwesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
     <!-- Header Content -->
-    <header></header>
+    <header class="flex items-center justify-between p-4 bg-yellow-200 shadow-sm sticky top-0 z-50">
+        <div class="text-2xl font-bold text-blue-500">Ainur Ravi Atharsyah</div>
+        
+        <!-- Navigation Menu -->
+        <nav class="flex gap-5">
+            <a class="text-gray-800 hover:text-blue-500 px-3 py-2 font-bold transition" href="#home-page">Home</a>
+            <a class="text-gray-800 hover:text-blue-500 px-3 py-2 font-bold transition" href="#our-profile-page">Our Profile</a>
+            <a class="text-gray-800 hover:text-blue-500 px-3 py-2 font-bold transition" href="#achievement-page">Achievement</a>
+            <a class="text-gray-800 hover:text-blue-500 px-3 py-2 font-bold transition" href="#message-us-page">Message Us</a>
+        </nav>
+    </header>
+
+  
 
     <!-- Main Content -->
-    <main></main>
+    <main>
+        <!-- Home Page -->
+        <section id="home-page" class="flex items-center justify-center min-h-screen text-center px-10">
+          <div class="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-10 fade-up">
+            <!-- LEFT SIDE -->
+        
+            <div class="text-left flex-1">
+              <p class="text-blue-500 font-semibold tracking-widest text-sm uppercase mb-4">Welcome to My Website</p>
+              <h1 class="text-4xl font-bold mb-6 leading-tight">Hi, <span
+              id="greetingName"
+              contenteditable="true"
+              spellcheck="false"
+              data-placeholder="Your Name"
+              class="greeting text-blue-500 border-b-2 border-blue-500 outline-none cursor-text"
+              ></span>!</h1>
+              <h2 class="text-2xl font-bold text-blue-500 mb-6">I Am Into Web Development!</h2>
+              <p class="text-gray-600 mb-6 max-w-md leading-tight">A student interested in frontend development who is passionate about
+                creating clean, responsive, and beautiful websites.</p>
+            
+        
+              <div class="flex gap-4">
+                <a href="https://www.linkedin.com/in/ainur-ravi-atharsyah-9b1a4b1b3/" target="blank"
+                class=" btn-glow bg-blue-500 text-white px-5 py-3 rounded-3xl text-xl"><i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/pietharr" target="blank"
+                class=" btn-glow bg-blue-500 text-white px-5 py-3 rounded-3xl text-xl"><i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+
+        <!-- RIGHT SIDE -->
+          <div>
+            <div class="flex items-center justify-center w-120 h-120 rounded-full text-2xl overflow-hidden">
+              <img src="https://media.licdn.com/dms/image/v2/D4D03AQHRW5H0CNxKMA/profile-displayphoto-scale_400_400/B4DZuYo87AI8Ak-/0/1767792431672?e=1773878400&v=beta&t=XEWYgntU5LIMI94p5wAcLlM87GOkSPcmVdXhtOhhpNw" 
+              alt="Profile Picture" class="rounded-full w-full h-full object-cover">
+            </div>
+          </div>
+        </div>
+        </section>
+        
+        
+
+        <!-- Profile Page -->
+        <section id="our-profile-page" class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+          <h1 class="text-3xl font-bold mb-4">About Me</h1>
+          <p class="text-lg text-gray-600">My name is Ainur Ravi Atharsyah, a newbie at Software Engineering. This is my first project to creating modern web applications.</p>
+        </section>
+
+        
+        <!-- Achievement Page -->
+        <section id="achievement-page" class="flex flex-col items-center justify-center min-h-screen text-center px-4">
+          <h1 class="text-3xl font-bold mb-4">My Achievement</h1>
+          <p class="text-lg text-gray-600">Coming Soon!</p>
+        </section>
+
+      
+
+        <!-- Message Us Page -->
+        <section id="message-us-page" class="contact-form min-h-screen px-8 py-12">
+          <h1 class="text-3xl font-bold mb-2">Message Us</h1>
+          <p class="text-gray-600 mb-6">Have questions or want to work with us? Send us a message and we'll get back to you promptly.</p>
+        
+          <form>
+            <div class="mb-4">
+              <label class="block mb-1">Name:</label>
+              <input type="text" placeholder= "Enter your name" class="w-full border border-gray-400 rounded px-3 py-2" />
+            </div>
+            <div class="mb-4">
+              <label class="block mb-1">Email:</label>
+              <input type="email" placeholder="Email@example.com" class="w-full border border-gray-400 rounded px-3 py-2" />
+            </div>
+            <div class="mb-6">
+              <label class="block mb-1">Message:</label>
+              <textarea rows="6" placeholder="Enter your message here..." class="w-full border border-gray-400 rounded px-3 py-2"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send Message</button>
+          </form>
+        </section>
+    </main>
 
     <!-- Footer Content -->
-    <footer></footer>
-    
+    <footer>
+        <p class="text-center text-white bg-blue-500 py-4">© 2026 Ainur Ravi Atharsyah. All rights reserved.</p>
+    </footer>
+
+    <!-- Popup Success -->
+    <div id="popup" class="hidden fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm">
+      <div class="bg-white p-6 rounded shadow-lg w-96 text-center">
+        <h2 class="text-xl font-bold mb-3">Message Sent</h2>
+        <p id="popup-content"></p>
+      </div>
+    </div>
+
     <!-- JavaScript External -->
     <script src="js/script.js"></script>
+    
+</div>
 </body>
 </html>
