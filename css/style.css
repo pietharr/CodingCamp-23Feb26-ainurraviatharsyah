@@ -8,22 +8,22 @@
     }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 72px; /* tinggi navbar kamu */
+    scroll-padding-top: 72px; 
   }
 
-/* Placeholder style */
+  
 #greetingName:empty::before {
   content: attr(data-placeholder);
-  color: #3b82f6;       /* biru */
-  opacity: 0.5;         /* redup */
+  color: #3b82f6; 
+  opacity: 0.5;      
 }
 
-/* Saat focus kasih efek */
+
 #greetingName:focus {
-  border-color: #2563eb;  /* biru lebih gelap */
+  border-color: #2563eb;  
 }
 
-/* Supaya caret tetap kelihatan */
+
 #greetingName {
   min-width: 80px;
   display: inline-block;

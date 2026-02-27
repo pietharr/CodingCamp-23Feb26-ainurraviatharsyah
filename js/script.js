@@ -2,7 +2,7 @@ const greetingName = document.getElementById("greetingName")
 
 if (greetingName) {
 
-  // Bersihin <br> kalau user hapus semua
+  
   greetingName.addEventListener("input", function () {
     if (
       greetingName.innerHTML === "<br>" ||
