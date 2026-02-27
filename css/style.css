@@ -11,7 +11,7 @@
     scroll-padding-top: 72px; 
   }
 
-  
+
 #greetingName:empty::before {
   content: attr(data-placeholder);
   color: #3b82f6; 
@@ -27,4 +27,55 @@
 #greetingName {
   min-width: 80px;
   display: inline-block;
+}
+
+/* responsive design */
+/* Tablet */
+@media (max-width: 1024px) {
+
+  body {
+    padding: 0 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 16px;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .btn-glow {
+    width: 100%;
+  }
+
+  #greetingName {
+    display: block;
+    margin-top: 8px;
+  }
+
+}
+
+/* Small phone */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .btn-glow {
+    padding: 10px;
+    font-size: 14px;
+  }
+
 }
